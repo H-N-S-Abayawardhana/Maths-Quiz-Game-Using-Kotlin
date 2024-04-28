@@ -1,0 +1,39 @@
+<!-- res/drawable/colored_circular_progress_bar.xml -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Circular progress bar -->
+    <item android:id="@android:id/progress">
+        <rotate
+            android:fromDegrees="0"
+            android:toDegrees="360"
+            android:pivotX="50%"
+            android:pivotY="50%">
+            <shape
+                android:innerRadiusRatio="3"
+                android:shape="ring"
+                android:thicknessRatio="8.0">
+                <gradient
+                    android:centerColor="#FFEB3B"
+                    android:endColor="#F44336"
+                    android:startColor="#4CAF50"
+                    android:type="sweep"/>
+            </shape>
+        </rotate>
+    </item>
+
+    <!-- Solid color overlay -->
+    <item android:id="@android:id/background">
+        <rotate
+            android:fromDegrees="0"
+            android:toDegrees="360"
+            android:pivotX="50%"
+            android:pivotY="50%">
+            <shape
+                android:innerRadiusRatio="3"
+                android:shape="ring"
+                android:thicknessRatio="8.0">
+                <solid android:color="@color/white"/>
+            </shape>
+        </rotate>
+    </item>
+</layer-list>
